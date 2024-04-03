@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "permissions": ["tabs", "webNavigation"],
+  "name": "TBA Zebra Filter",
+  "description": "Enable focus mode on Chrome's official Extensions and Chrome Web Store documentation.",
+  "version": "1.0",
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "64": "images/icon-64.png",
+    "128": "images/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.thebluealliance.com/*"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
